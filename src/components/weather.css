@@ -1,0 +1,56 @@
+.weatherContainer {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  overflow: hidden;
+  margin: auto;
+  padding: 80px;
+  opacity: 0.9;
+  /* background: white; */
+  border-radius: 20px;
+}
+.searchBar {
+  /* margin-left: 200px; */
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  background: #bdbdbd;
+  padding-left: 30px;
+  font-size: large;
+  color: white;
+}
+
+.cityWeather {
+  font-weight: normal;
+  margin-top: 140px;
+  text-align: center;
+  font-size: 48px;
+}
+
+.dateWeather,
+.weatherType {
+  font-weight: normal;
+  text-align: center;
+  font-size: x-large;
+  font-size: 36px;
+}
+
+.tempBox {
+  width: 40%;
+  background: #bdbdbd;
+  border-radius: 20px;
+  height: 110px;
+  margin-left: 30%;
+  margin-top: 70px;
+  font-size: 36px;
+}
+
+.tempBox h2 {
+  text-align: center;
+  padding: 20px;
+  font-weight: 900;
+}
+
+.weatherType {
+  margin: 60px;
+}
