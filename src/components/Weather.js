@@ -16,7 +16,7 @@ function Weather() {
       //   setWeather(data);
       const data = await getWeather(query);
       setWeather({
-        temps: data.main.temp,
+        temps: Math.round(data.main.temp),
         cityname: data.name,
         countryname: data.sys.country,
       });
@@ -76,15 +76,24 @@ function Weather() {
           value={query}
           onKeyDown={search}
         ></input>
-        <h1 className="cityWeather">
-          {weather.cityname}, {weather.countryname}
-        </h1>
+        {weather.cityname !== undefined ? (
+          <h1 className="cityWeather">
+            {weather.cityname}, {weather.countryname}
+          </h1>
+        ) : (
+          <h1 className="cityWeather">Search your city</h1>
+        )}
+
         <p className="dateWeather">
           {today}, {todayDate} {month} {year}
         </p>
-        <div className="tempBox">
-          <h2 className="tempText"> {weather.temps}</h2>
-        </div>
+        {weather.temps !== undefined ? (
+          <div className="tempBox">
+            <h2 className="tempText"> {weather.temps}°C</h2>
+          </div>
+        ) : (
+          ""
+        )}
         <p className="weatherType">Clouds</p>
       </div>
     </>
